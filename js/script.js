@@ -1,3 +1,5 @@
+// Declaration and Init of Constant
+
 const nameSur = document.getElementById("namesur")
 console.log(nameSur)
 
@@ -9,6 +11,9 @@ console.log(rangeAge)
 
 const keyGen = document.getElementById("keygen")
 
+const del = document.getElementById("delete")
+
+//Function Return the price of Train Ticket
 keyGen.addEventListener('click' , function(){
 
 const NameOpt = nameSur.value
@@ -29,7 +34,6 @@ if(range === "over18"){
     price.innerHTML = "Il Prezzo finale del Biglietto di " + NameOpt + " è " +  finalPrice.toFixed(2) + "€"
 }
 
-
 if(range === "under18"){
     finalPrice = distance * 0.21
     finalPrice = finalPrice - (finalPrice * 0.20)
@@ -42,5 +46,18 @@ if(range === "over65"){
     price.innerHTML = "Il Prezzo finale del Biglietto di " + NameOpt + " è " +  finalPrice.toFixed(2) + "€"
 }
 
+})
+
+//Function for delete the data on 
+del.addEventListener('click', function(){
+    
+let price = document.getElementById("TicketPrice")
+
+nameSur.value = " "
+
+km.value = " "
+ 
+price.innerHTML = ""
 
 })
+
